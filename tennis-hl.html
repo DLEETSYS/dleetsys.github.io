@@ -12,6 +12,7 @@
             --neon-color: #ccff00; /* Tennis HL Neon */
             --text-white: #ffffff;
             --text-gray: #a1a1a6;
+            --text-dark-gray: #444;
         }
 
         body, html {
@@ -30,6 +31,9 @@
         .container {
             padding: 20px;
             max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .logo {
@@ -50,7 +54,7 @@
         p {
             font-size: 1.1rem;
             color: var(--text-gray);
-            margin-bottom: 40px;
+            margin-bottom: 32px;
             line-height: 1.4;
         }
 
@@ -63,34 +67,58 @@
             text-decoration: none;
             font-weight: 700;
             font-size: 1rem;
-            transition: transform 0.2s ease;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+            margin-bottom: 20px;
         }
 
         .app-store-btn:hover {
             transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        /* Email Contact Styles */
+        .contact-link {
+            color: var(--text-gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        .contact-link:hover {
+            color: var(--neon-color);
+            border-bottom: 1px solid var(--neon-color);
         }
 
         .footer {
             position: absolute;
             bottom: 30px;
             font-size: 0.8rem;
-            color: #444;
+            color: var(--text-dark-gray);
+            line-height: 1.6;
+        }
+
+        .footer a {
+            color: var(--text-dark-gray);
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Replace 'logo.png' with your actual logo file path -->
+        <!-- Replace 'logo-tennis.png' with your actual logo file path -->
         <img src="logo-tennis.png" alt="Tennis HL Logo" class="logo">
         
         <h1>Tennis HL</h1>
-        <p>AI-powered rally detection. Turn match footage into highlights private.</p>
+        <p>AI-powered rally detection. Turn match footage into highlights privately.</p>
         
+        <!-- Clear Contact Point -->
+        <a href="mailto:hello@dleetsys.com" class="contact-link">Contact Support</a>
     </div>
 
     <div class="footer">
-        © 2026 Tennis HL. All analysis performed on-device.
+        © 2026 Tennis HL. All analysis performed on-device.<br>
     </div>
 
 </body>
